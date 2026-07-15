@@ -66,37 +66,3 @@ SELECT Continent, Region, COUNT(Name) FROM country
 GROUP BY Continent, Region;
 
 
-
-
-
-
-SELECT COUNT(DISTINCT Name) AS total_countries
-FROM country
-WHERE LifeExpectancy BETWEEN 70.1 AND 83.5;
-
-SELECT SUM(Population) AS total_population
-FROM country
-WHERE IndepYear > 1990;
-
-SELECT COUNT(*) AS total_countries
-FROM country
-WHERE IndepYear IS NOT NULL;
-
-SELECT Region,
-       COUNT(Name) AS total_countries,
-       SUM(SurfaceArea) AS total_surface_area
-FROM country
-GROUP BY Region;
-
-
-SELECT Continent,
-       COUNT(Name) AS total_countries
-FROM country
-GROUP BY Continent;
-
-SELECT Continent,
-       Region,
-       COUNT(Name) AS total_countries
-FROM country
-GROUP BY Continent, Region;
-
